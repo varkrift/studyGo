@@ -1,14 +1,13 @@
 import React from 'react'
 
 const styles = {
-    div: {
-        backgroundColor: "red",
-        margin: 0,
+    li: {
+        margin: '3px',
     }
 }
 
 export default function TodoItems() {
     return (
-        <div style={styles.div}>BlockItem</div>
+            <li style={styles.li}>123</li>
     )
 }

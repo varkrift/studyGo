@@ -1,19 +1,27 @@
 import React from 'react'
+import TodoItems from './TodoItems'
 
 const styles = {
+    div: {
+        margin: 0,
+        padding: '1px',
+        borderRadius: '20px',
+        backgroundColor: "grey",
+    },
     ul: {
         listStyle: 'none',
-        margin: 0,
-        padding: 0,
-    }
+    },
 }
 
 export default function TodoList() {
     return (
-        <ul style={styles.ul}>
-            <li>1</li>
-            <li>2</li>
-        </ul>
+        <div style={styles.div}>
+            <ul>
+                <TodoItems></TodoItems>
+                <TodoItems></TodoItems>
+                <TodoItems></TodoItems>
+            </ul>
+        </div>
     )
 
 }
