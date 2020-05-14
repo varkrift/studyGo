@@ -12,10 +12,14 @@ function App() {
     {id: 3, completed: true, title: "Buy milk"},
   ]
 
+  function toogleTodo(id) {
+    console.log("haha ", id)
+  }
+
   return (<div className="wrapper">
     <h1>StudyGo - learning portal</h1>
 
-    <TodoList todos1={todos}></TodoList>
+    <TodoList todos1={todos} onToggle={toogleTodo}></TodoList>
   </div>);
 }
 
