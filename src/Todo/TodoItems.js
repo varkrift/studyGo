@@ -1,13 +1,39 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const styles = {
     li: {
-        margin: '3px',
-    }
+        display: 'flex',
+        justifyContent: 'space-between',
+        margin: '10px',
+        alignItems: 'center',
+    },
+    button: {
+        marginLeft: '10px',
+        padding: '5px',
+        width: '50px',
+        border: 'none',
+        borderRadius: '8px'
+    },
 }
 
-export default function TodoItems() {
+function TodoItems({todo2, index}) {
     return (
-            <li style={styles.li}>123</li>
+        <li style={styles.li}>
+            <span>
+            <input type="checkbox"></input>
+            {index+1 + "."}
+            {todo2.title}
+            </span>
+
+            <button style={styles.button}>&times;</button>
+        </li>
     )
 }
+
+TodoItems.propTypes = {
+    todo2: PropTypes.object.isRequired,
+    index: PropTypes.number.isRequired,
+}
+
+export default TodoItems

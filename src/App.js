@@ -5,10 +5,17 @@ import TodoList from './Todo/TodoList'
 
 
 function App() {
+
+  const todos = [
+    {id: 1, completed: true, title: "Buy car"},
+    {id: 2, completed: true, title: "Buy book"},
+    {id: 3, completed: true, title: "Buy milk"},
+  ]
+
   return (<div className="wrapper">
     <h1>StudyGo - learning portal</h1>
 
-    <TodoList></TodoList>
+    <TodoList todos1={todos}></TodoList>
   </div>);
 }
 
