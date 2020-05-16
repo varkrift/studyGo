@@ -17,3 +17,7 @@ code {
   margin: 0 auto;
   width: 600px;
 }
+
+.done {
+  text-decoration: line-through;
+}
