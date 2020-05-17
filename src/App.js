@@ -2,13 +2,15 @@ import React from 'react'
 import TodoList from './Todo/TodoList'
 import Context from './context'
 
-
 function App() {
 
   let [todos, setTodos] = React.useState( [
-    {id: 1, completed: true, title: "Buy car"},
+    {id: 1, completed: false, title: "Buy car"},
     {id: 2, completed: false, title: "Buy book"},
     {id: 3, completed: false, title: "Buy milk"},
+    {id: 4, completed: false, title: "Buy home"},
+    {id: 5, completed: false, title: "Buy home"},
+    {id: 6, completed: false, title: "Buy home"},
   ])
 
   function toogleTodo(id) {
@@ -28,7 +30,7 @@ function App() {
   return (
     <Context.Provider value={{removeTodo}}>
       <div className="wrapper">
-        <h1>StudyGo - learning portal</h1>
+        <h1 style={{textAlign: "center"}}>StudyGo - learning portal</h1>
 
         {todos.length ? <TodoList todos1={todos} onToggle={toogleTodo}></TodoList> : <p>No Todos</p>}
       </div>

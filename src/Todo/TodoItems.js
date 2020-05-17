@@ -1,21 +1,35 @@
 import React, {useContext} from 'react'
 import PropTypes from 'prop-types'
 import Context from '../context'
+import Iam2 from '../Iam2.png'
+
 
 const styles = {
-    li: {
+    userCard: {
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         margin: '10px',
         alignItems: 'center',
+        flexDirection: 'column',
+        fontSize: '20px',
+        width: '250px',
+        height: '400px',
+        borderRadius: '40px',
+        padding: '1px',
+        backgroundColor:'rgb(223, 223, 223)',
     },
     button: {
         marginLeft: '10px',
         padding: '5px',
         width: '50px',
         border: 'none',
-        borderRadius: '8px'
+        borderRadius: '8px',
+        backgroundColor: 'brown',
     },
+    img: {
+        width: "10em",
+        borderRadius: '40px',
+    }
 }
 
 function TodoItems({todo2, index, onChange}) {
@@ -28,9 +42,9 @@ function TodoItems({todo2, index, onChange}) {
     }
 
     return (
-        <li style={styles.li}>
+        <div id="userCard" style={styles.userCard}>
 
-            <span className={classes.join(" ")}>
+            {/* <span className={classes.join(" ")}>
             <input
             type="checkbox"
             checked={todo2.completed }
@@ -38,10 +52,12 @@ function TodoItems({todo2, index, onChange}) {
             </input>
             {index+1 + "."}
             {todo2.title}
-            </span>
+            </span> */}
+            <div><img src={Iam2} alt="logo" style={styles.img} /></div>
+            <div>{todo2.title}</div>
 
-            <button style={styles.button} onClick={() => removeTodo(todo2.id)}>&times;</button>
-        </li>
+            <div><button style={styles.button} onClick={() => removeTodo(todo2.id)}>&times;</button></div>
+        </div>
     )
 }
 

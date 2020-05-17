@@ -13,9 +13,9 @@ code {
 }
 
 .wrapper {
-  padding-top: 5em;
+  padding: 5em;
   margin: 0 auto;
-  width: 600px;
+  width: 80%;
 }
 
 .done {

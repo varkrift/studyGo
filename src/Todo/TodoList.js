@@ -3,27 +3,25 @@ import TodoItems from './TodoItems'
 import PropTypes from 'prop-types'
 
 const styles = {
-    div: {
+    users: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexWrap: 'wrap',
         margin: 0,
-        padding: '1px',
+        padding: '10px',
         borderRadius: '20px',
-        backgroundColor: "grey",
-    },
-    ul: {
-        listStyle: 'none',
+        backgroundColor: "rgb(250, 255, 219)",
     },
 }
 
 function TodoList(props) {
     return (
-        <div style={styles.div}>
-            <ul style={styles.ul}>
-
+        <div style={styles.users}>
             {props.todos1.map( (todo, index) => {
                 return <TodoItems todo2={todo} key={index} index={index} onChange={props.onToggle}></TodoItems>
                 })
             }
-            </ul>
         </div>
     )
 
