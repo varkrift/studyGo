@@ -1,5 +1,6 @@
 import React from 'react'
 import TodoList from './Todo/TodoList'
+import FormRegistration from './Todo/FormRegistration'
 import Context from './context'
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
     <Context.Provider value={{removeTodo}}>
       <div className="wrapper">
         <h1 style={{textAlign: "center"}}>StudyGo - learning portal</h1>
-
+        <FormRegistration></FormRegistration>
         {todos.length ? <TodoList todos1={todos} onToggle={toogleTodo}></TodoList> : <p>No Todos</p>}
       </div>
     </Context.Provider>
