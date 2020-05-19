@@ -1,6 +1,7 @@
 import React from 'react'
-import UserList from './Todo/UserList'
-import FormRegistration from './Todo/FormRegistration'
+import Header from './Components/Header'
+import UserList from './Users/UserList'
+import FormRegistration from './Users/FormRegistration'
 import Context from './context'
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
 
   return (
     <Context.Provider value={{removeUser}}>
-
+      <Header></Header>
       <div className="wrapper">
 
         <h1 style={{textAlign: "center"}}>StudyGo - learning portal</h1>

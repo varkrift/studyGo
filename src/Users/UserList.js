@@ -24,7 +24,6 @@ function UserList(props) {
             }
         </div>
     )
-
 }
 
 UserList.propTypes = {

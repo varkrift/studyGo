@@ -14,7 +14,8 @@ const styles = {
         fontSize: '20px',
         width: '250px',
         height: '400px',
-        border: '2px solid #E0E0E0',
+        // border: '1px solid #E0E0E0',
+        border: 'none',
         borderRadius: '40px',
         padding: '1px',
         backgroundColor:'white',
@@ -25,7 +26,9 @@ const styles = {
         overflow: 'hidden',
         width: '6.5em',
         height: '6.5em',
-        marginTop: '1.5em'
+        marginTop: '1.5em',
+        border: '1.5px solid #EEEEEE',
+        borderRadius: '40px',
       },
 
     userImg: {
@@ -46,6 +49,7 @@ const styles = {
         border: 'none',
         borderRadius: '8px',
         backgroundColor: '#FF8A65',
+        outline: 'none',
     },
 }
 
