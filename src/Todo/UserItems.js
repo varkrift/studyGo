@@ -14,9 +14,10 @@ const styles = {
         fontSize: '20px',
         width: '250px',
         height: '400px',
+        border: '2px solid #E0E0E0',
         borderRadius: '40px',
         padding: '1px',
-        backgroundColor:'#E0E0E0',
+        backgroundColor:'white',
     },
 
     divUserImg: {
@@ -48,39 +49,24 @@ const styles = {
     },
 }
 
-function TodoItems({todo2, index, onChange}) {
+function UserItems({user, index}) {
     
-    const {removeTodo} = useContext(Context);
-    const classes = [];
-
-    if(todo2.completed) {
-        classes.push("done")
-    }
+    const {removeUser} = useContext(Context);
 
     return (
         <div id="userCard" style={styles.userCard}>
 
-            {/* <span className={classes.join(" ")}>
-            <input
-            type="checkbox"
-            checked={todo2.completed }
-            onChange={ () => onChange(todo2.id)}>
-            </input>
-            {index+1 + "."}
-            {todo2.title}
-            </span> */}
             <div style={styles.divUserImg}><img src={Iam2} alt="logo" style={styles.userImg} /></div>
-            <div>{todo2.title}</div>
+            <div>{user.name + " " + user.surname}</div>
 
-            <div><button style={styles.buttonDelete} onClick={() => removeTodo(todo2.id)}><img src={deleteIcon} alt="delete"  /></button></div>
+            <div><button style={styles.buttonDelete} onClick={() => removeUser(user.id)}><img src={deleteIcon} alt="delete"  /></button></div>
         </div>
     )
 }
 
-TodoItems.propTypes = {
-    todo2: PropTypes.object.isRequired,
+UserItems.propTypes = {
+    user: PropTypes.object.isRequired,
     index: PropTypes.number.isRequired,
-    onChange: PropTypes.func.isRequired,
 }
 
-export default TodoItems
+export default UserItems
