@@ -2,13 +2,11 @@
 
 body {
   margin: 0;
-  /* font-family: 'Roboto', sans-serif; */
   font-family: -apple-system, BlinkMacSystemFont,'Roboto', 'Segoe UI', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #ECEFF1; */
 }
 
 code {
@@ -17,19 +15,76 @@ code {
 }
 
 .wrapper {
-  padding: 0;
+  padding: 0 0 200px 0;
   margin: 0 auto;
   width: 70%;
   background-color: #ECEFF1;
   border: 1px solid #E0E0E0;
-  /* border-top: none; */
 }
 
-.done {
-  text-decoration: line-through;
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  border: 1px solid #E0E0E0;
+  border-bottom: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 70%;
+  height: 80px;
 }
 
-h1 {
-  margin-bottom: 3rem;
+.conteiner {
+
 }
 
+.header__row {
+
+}
+
+.header__logo {
+
+}
+
+.header__nav {
+
+}
+
+.logo {
+  margin: 0 20px 0 20px;
+
+}
+
+.wrap-logo {
+  display: flex;
+  align-items: center;
+ 
+}
+
+header a {
+  color: #212121;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  border-radius: 4px;
+}
+
+header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+header a:hover {
+  background-color: #FBC02D;
+  color: #212121;
+}
+
+header a.active {
+  background-color: #FBC02D;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  }
