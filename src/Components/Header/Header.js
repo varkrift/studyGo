@@ -26,22 +26,16 @@ const styles = {
 
 function Header() {
     return (
-        // <div style={styles.div}>
-        //     < style={styles.divHeader}>
-        //       <img src={headerIcon} style={styles.divIcon} alt="logo"></img>
-        //       <span>StudyGo</span>
-        //     </div>
-        // </div>
-
         <header className="header">
             <div className="conteiner">
-                <div className="wrap-logo">
-                    <a href="#logo" className="logo"><img src={headerIcon} style={styles.divIcon} alt="logo"></img>StudyGo</a>
+                <div className="logo">
+                    <div className="logo__img"><img src={headerIcon} style={styles.divIcon} alt="logo"></img></div>
+                    <a href="#logo" className="logo">StudyGo</a>
                 </div>
-                <nav>
-                    <a className="active" href="#home">Главная</a>
-                    <a href="#contact">Контакты</a>
-                    <a href="#about">О нас</a>
+                <nav className="menu">
+                    <a className="menu__main" href="#home">Главная</a>
+                    <a href="menu__contacts">Контакты</a>
+                    <a href="menu__about">О нас</a>
                 </nav>
             </div>
         </header>

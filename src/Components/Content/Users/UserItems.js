@@ -1,8 +1,8 @@
 import React, {useContext} from 'react'
 import PropTypes from 'prop-types'
-import Context from '../context'
-import Iam2 from '../Iam2.png'
-import deleteIcon from '../deleteIcon.svg'
+import Context from '../../../context'
+import Iam2 from '../../../img/Iam2.png'
+import deleteIcon from '../../../img/deleteIcon.svg'
 
 const styles = {
     userCard: {
