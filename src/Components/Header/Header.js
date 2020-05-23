@@ -28,15 +28,17 @@ function Header() {
     return (
         <header className="header">
             <div className="conteiner">
-                <div className="logo">
-                    <div className="logo__img"><img src={headerIcon} style={styles.divIcon} alt="logo"></img></div>
-                    <a href="#logo" className="logo">StudyGo</a>
-                </div>
-                <nav className="menu">
-                    <a className="menu__main" href="#home">Главная</a>
-                    <a href="menu__contacts">Контакты</a>
-                    <a href="menu__about">О нас</a>
-                </nav>
+                <div className="header__body">
+                    <a href="#logo" className="header__logo logo">
+                        <img src={headerIcon} style={styles.divIcon} alt="logo"></img>
+                        <a href="#logo" className="logo">StudyGo</a>
+                    </a>
+                    <nav className="header__menu">
+                        <a href="#home"className="menu__main" >Главная</a>
+                        <a href="menu__contacts">Контакты</a>
+                        <a href="menu__about">О нас</a>
+                    </nav>
+                </div>    
             </div>
         </header>
     )
