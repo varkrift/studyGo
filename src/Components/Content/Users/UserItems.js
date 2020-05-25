@@ -14,7 +14,6 @@ const styles = {
         fontSize: '20px',
         width: '250px',
         height: '400px',
-        // border: '1px solid #E0E0E0',
         border: 'none',
         borderRadius: '40px',
         padding: '1px',

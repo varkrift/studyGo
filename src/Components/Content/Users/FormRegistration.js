@@ -1,5 +1,4 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
 
 const styles = {
     form: {
@@ -35,7 +34,6 @@ function FormRegistration() {
              </form>
 
         </div>
-        // <input type="file" onchange={showFile}/>   
     )
 }
 

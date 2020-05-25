@@ -11,7 +11,6 @@ const styles = {
         margin: 0,
         padding: '50px',
         borderRadius: '20px',
-        // backgroundColor: "#E1F5FE",
     },
 }
 
