@@ -2,6 +2,7 @@ import React from 'react'
 import headerIcon from './headerIcon2.png'
 // import PropTypes from 'prop-types'
 
+
 const styles = {
     div: {
         padding: "0",
