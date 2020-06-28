@@ -1,5 +1,8 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import PropTypes from 'prop-types'
+import Context from '../../../context'
+import Iam2 from '../../../img/Iam2.png'
+import deleteIcon from '../../../img/deleteIcon.svg'
 
 const styles = {
     userCard: {
@@ -38,35 +41,35 @@ const styles = {
         borderRadius: '40px',
       },
 
-    // buttonDelete: {
-    //     margin: '10px',
-    //     padding: '2px',
-    //     width: '50px',
-    //     border: 'none',
-    //     borderRadius: '8px',
-    //     backgroundColor: '#FF8A65',
-    //     outline: 'none',
-    // },
+    buttonDelete: {
+        margin: '10px',
+        padding: '2px',
+        width: '50px',
+        border: 'none',
+        borderRadius: '8px',
+        backgroundColor: '#FF8A65',
+        outline: 'none',
+    },
 }
 
 function UserItems(props) {
     
-    // const {removeUser} = useContext(Context);
+    const {removeUser} = useContext(Context);
 
     return (
         <div id="userCard" style={styles.userCard}>
 
-            <div style={styles.divUserImg}><img src={props.img} alt="logo" style={styles.userImg} /></div>
-            <div>{props.name}</div>
+            <div style={styles.divUserImg}><img src={Iam2} alt="logo" style={styles.userImg} /></div>
+            <div>{props.user.name + " " + props.user.surname}</div>
 
-            {/* <div><button style={styles.buttonDelete} onClick={() => removeUser(props.user.id)}><img src={deleteIcon} alt="delete"  /></button></div> */}
+            <div><button style={styles.buttonDelete} onClick={() => removeUser(props.user.id)}><img src={deleteIcon} alt="delete"  /></button></div>
         </div>
     )
 }
 
 UserItems.propTypes = {
-    name: PropTypes.string,
-    img: PropTypes.string,
+    user: PropTypes.object.isRequired,
+    index: PropTypes.number.isRequired,
 }
 
 export default UserItems

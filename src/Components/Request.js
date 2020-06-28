@@ -1,24 +1,37 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
+import UserItems from './Content/Users/UserItems';
 
-export default class Request extends Component {
-    
+const BASE_PATH =  "https://api.github.com";
+const USERS_PATH = "/users";
+
+class Request extends Component {
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = { 
+
+            users: {},
+            login: '',
+            isLoaded: false,
             error: null,
-            isLoaded:false,
-            items: [],
         }
+        this.fetchData = this.fetchData.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.setParamInput = this.setParamInput.bind(this);
     }
 
     componentDidMount() {
-        fetch("http://post-reckue.apps.us-east-1.starter.openshift-online.com/tags?desc=true&limit=10&offset=0&sort=id")
+        // const {paramDesc, paramLimit, paramOffset, paramSort} = this.state;
+        this.fetchData()
+    };
+
+    fetchData = (login) => {
+        fetch(`${BASE_PATH}${USERS_PATH}/${login}`)
         .then(res => res.json())
         .then(
             (result) => {
                 this.setState ({
                     isLoaded: true,
-                    items: result,
+                    users: result,
                 });
             },
             (error) => {
@@ -27,28 +40,47 @@ export default class Request extends Component {
                     error
                 });
             }
-
         )
-    };
-    
-    
-    
+    }
+
+    setParamInput = (event) => {
+        if(event.key === 'Enter') {
+            const {login} = this.state;
+            this.fetchData(login)
+        }
+    }
+
+    handleInputChange = (event) => {
+            this.setState({
+            login: event.target.value,
+            })
+    }
+
     render() {
-        const {error, isLoaded, items} = this.state;
+        const {users, login, isLoaded, error} = this.state;
+                
         if (error) {
             return <p>Error {error.message}</p>
         } else if (!isLoaded) {
             return <p>Loading...</p>
         } else {
-            return (
-                <ul>
-                    {items.map(item => (
-                        <li key={item.name}>
-                            {item.id}
-                        </li>
-                    ))}
-                </ul>
-            )
+        return (
+            <div>
+
+                <input name="inputLogin" type="text"
+                onKeyPress={this.setParamInput}
+                onChange={this.handleInputChange}
+                value={login}
+                label="login"
+                placeholder="login"
+                />
+
+                <UserItems key={users.id} name={users.name} img={users.avatar_url}> </UserItems>
+
+            </div>
+        );
         }
     }
 }
+ 
+export default Request;

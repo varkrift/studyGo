@@ -32,7 +32,7 @@ function Header() {
                 <div className="header__body">
                     <a href="#logo" className="header__logo logo">
                         <img src={headerIcon} style={styles.divIcon} alt="logo"></img>
-                        <a href="#logo" className="logo">StudyGo</a>
+                        StudyGo
                     </a>
                     <nav className="header__menu">
                         <a href="#home"className="menu__main" >Главная</a>

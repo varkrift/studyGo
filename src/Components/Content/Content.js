@@ -1,7 +1,7 @@
 import React from 'react';
 import Context from '../../context'
 import FormRegistration from './Users/FormRegistration'
-import UserList from './Users/UserList'
+// import UserList from './Users/UserList'
 
 
 function Content() {
@@ -22,8 +22,8 @@ function Content() {
         <Context.Provider value={{removeUser}}>
             <div>
                 <h1 style={{textAlign: "center"}}>StudyGo - learning portal</h1>
-                <FormRegistration></FormRegistration>
-                {users.length ? <UserList users={users}></UserList> : <p>No Users</p>}
+                {/* <FormRegistration></FormRegistration> */}
+                {/* {users.length ? <UserList users={users}></UserList> : <p>No Users</p>} */}
             </div>
         </Context.Provider>
     )
