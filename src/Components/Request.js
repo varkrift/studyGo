@@ -9,8 +9,9 @@ class Request extends Component {
         super(props);
         this.state = { 
 
-            users: {},
-            login: '',
+            user: {},
+            // users: [],
+            login: 'egnaf',
             isLoaded: false,
             error: null,
         }
@@ -31,7 +32,7 @@ class Request extends Component {
             (result) => {
                 this.setState ({
                     isLoaded: true,
-                    users: result,
+                    user: result,
                 });
             },
             (error) => {
@@ -57,7 +58,7 @@ class Request extends Component {
     }
 
     render() {
-        const {users, login, isLoaded, error} = this.state;
+        const {user, login, isLoaded, error} = this.state;
                 
         if (error) {
             return <p>Error {error.message}</p>
@@ -75,7 +76,7 @@ class Request extends Component {
                 placeholder="login"
                 />
 
-                <UserItems key={users.id} name={users.name} img={users.avatar_url}> </UserItems>
+                <UserItems key={user.id} name={user.name} img={user.avatar_url} biography={user.bio}> </UserItems>
 
             </div>
         );

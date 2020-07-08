@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const styles = {
     userCard: {
         display: 'flex',
-        justifyContent: 'space-between',
+        // justifyContent: 'space-between',
         margin: '10px',
         alignItems: 'center',
         flexDirection: 'column',
@@ -57,7 +57,8 @@ function UserItems(props) {
         <div id="userCard" style={styles.userCard}>
 
             <div style={styles.divUserImg}><img src={props.img} alt="logo" style={styles.userImg} /></div>
-            <div>{props.name}</div>
+            <div style={{paddingTop: "10px", textAlign: "center", fontWeight: 'bold'}}>{props.name}</div>
+            <div style={{fontSize:"0.75em", padding: "5px 10px 0px 10px", textAlign: "center"}}>{props.biography}</div>
 
             {/* <div><button style={styles.buttonDelete} onClick={() => removeUser(props.user.id)}><img src={deleteIcon} alt="delete"  /></button></div> */}
         </div>

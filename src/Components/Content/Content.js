@@ -6,14 +6,14 @@ import FormRegistration from './Users/FormRegistration'
 
 function Content() {
 
-    let [users, setUsers] = React.useState( [
+    let [users, setUsers] = React.useState([
         {id: 1, name: "Danil", surname: "Schuchkin"},
         {id: 2, name: "Svetlana", surname: "Ivanova"},
         {id: 3, name: "Vadim", surname: "Semkin"},
         {id: 4, name: "Ivan", surname: "Onopko"},
         {id: 5, name: "Boris", surname: "Durnov"},
         {id: 6, name: "Natasha", surname: "Petrova"},
-      ])
+    ])
 
     function removeUser(id) {
         setUsers(users.filter(user => { return user.id !== id }))
